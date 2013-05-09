@@ -41,6 +41,7 @@ class RegistriesController < ApplicationController
   # POST /registries.json
   def create
     @registry = Registry.new(params[:registry])
+    @registry.user = current_user
 
     respond_to do |format|
       if @registry.save

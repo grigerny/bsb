@@ -5,6 +5,10 @@ Bsb::Application.routes.draw do
   devise_for :users
 
   get "home/index"
+  
+  namespace :user do
+  root :to => "registries#new"
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
