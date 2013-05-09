@@ -1,4 +1,7 @@
 Bsb::Application.routes.draw do
+  resources :registries
+
+
   devise_for :users
 
   get "home/index"

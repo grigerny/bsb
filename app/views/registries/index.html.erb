@@ -1,0 +1,21 @@
+<h1>Listing registries</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @registries.each do |registry| %>
+  <tr>
+    <td><%= link_to 'Show', registry %></td>
+    <td><%= link_to 'Edit', edit_registry_path(registry) %></td>
+    <td><%= link_to 'Destroy', registry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Registry', new_registry_path %>
